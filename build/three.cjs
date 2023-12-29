@@ -29838,7 +29838,7 @@ class WebGLRenderer {
 					generateMipmaps: true,
 					type: extensions.has( 'EXT_color_buffer_half_float' ) ? HalfFloatType : UnsignedByteType,
 					minFilter: LinearMipmapLinearFilter,
-					samples: ( isWebGL2 ) ? 4 : 0
+					samples: ( isWebGL2 && antialias === true ) ? 4 : 0
 				} );
 
 				// debug
