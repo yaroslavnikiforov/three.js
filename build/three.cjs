@@ -29492,7 +29492,7 @@ class WebGLRenderer {
 					generateMipmaps: true,
 					type: ( extensions.has( 'EXT_color_buffer_half_float' ) || extensions.has( 'EXT_color_buffer_float' ) ) ? HalfFloatType : UnsignedByteType,
 					minFilter: LinearMipmapLinearFilter,
-					samples: 4,
+					samples: ( antialias === true ) ? 4 : 0,
 					stencilBuffer: stencil
 				} );
 
